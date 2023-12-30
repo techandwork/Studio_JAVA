@@ -1,0 +1,41 @@
+// Estabeleça os dados para o carro
+// Criado o objeto carro, sera vista uma mascara que pedira de inserir a marca, o modelo e a cor do carro
+
+import java.util.Scanner;
+
+class Auto {
+  private String marca;
+  private String modello;
+  private String colore;
+
+  public Auto() {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Inserisci la marca:");
+    this.marca = scanner.nextLine();
+
+    System.out.println("Inserisci il modello:");
+    this.modello = scanner.nextLine();
+
+    System.out.println("Inserisci il colore:");
+    this.colore = scanner.nextLine();
+
+    scanner.close();
+  }
+
+  public String getMarca() {
+    return marca;
+  }
+
+  public String getModello() {
+    return modello;
+  }
+
+  public String getColore() {
+    return colore;
+  }
+
+  public void mostraAuto() {
+    System.out.println("Marca: " + marca + ", Modello: " + modello + ", Colore: " + colore);
+  }
+}
